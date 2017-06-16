@@ -15,7 +15,7 @@ defmodule GovindTweet.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger],
+    [extra_applications: [:logger, :quantum],
      mod: {GovindTweet.Application, []}]
   end
 
@@ -29,6 +29,7 @@ defmodule GovindTweet.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:credo, "~> 0.8.1"},
+    {:quantum, "~> 1.9"}]
   end
 end
